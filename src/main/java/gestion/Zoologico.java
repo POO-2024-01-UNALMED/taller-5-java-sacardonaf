@@ -10,7 +10,9 @@ public class Zoologico {
 		this.nombre=nombre;
 		this.ubicacion=ubicacion;
 	}
-	public Zoologico() {}
+	public Zoologico() {
+		this(null,null);
+	}
 	
 	public String getNombre() {
 		return nombre;
@@ -28,5 +30,21 @@ public class Zoologico {
 			
 		}
 		return con;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public String getUbicacion() {
+		return ubicacion;
+	}
+	
+	public void setUbicacion(String ubicacion) {
+		this.ubicacion = ubicacion;
+	
+	}
+	
+	public void setZona(ArrayList<Zona> zonas) {
+		this.zonas = zonas;
 	}
 }

@@ -13,7 +13,9 @@ public class Ave extends Animal {
 		this.colorPlumas=colorPlumas;
 		listado.add(this);
 	}
-	public Ave() {}
+	public Ave() {
+		this(null,0,null,null,null);
+	}
 
 	public static ArrayList<Ave> getListado() {
 		return listado;

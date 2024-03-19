@@ -15,7 +15,9 @@ public class Reptil extends Animal {
 		this.largoCola=largoCola;
 		listado.add(this);
 	}
-	public Reptil() {}
+	public Reptil() {
+		this(null,0,null,null,null,0);
+	}
 	
 	public static ArrayList<Reptil> getListado() {
 		return listado;

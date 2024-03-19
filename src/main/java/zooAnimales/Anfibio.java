@@ -14,7 +14,9 @@ public class Anfibio extends Animal {
 		this.venenoso=venenoso;
 		listado.add(this);
 	}
-	public Anfibio() {}
+	public Anfibio() {
+		this(null,0,null,null,null,false);
+	}
 	
 	public static ArrayList<Anfibio> getListado() {
 		return listado;

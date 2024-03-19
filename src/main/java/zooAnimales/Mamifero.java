@@ -14,7 +14,9 @@ public class Mamifero extends Animal {
 		this.patas=patas;
 		listado.add(this);
 	}
-	public Mamifero() {}
+	public Mamifero() {
+		this(null, 0, null, null, false, 0);
+	}
 	
 	public static ArrayList<Mamifero> getListado() {
 		return listado;

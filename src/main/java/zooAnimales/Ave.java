@@ -15,10 +15,7 @@ public class Ave extends Animal {
 	}
 	public Ave() {
 		this(null,0,null,null,null);
-	}
-
-	public static ArrayList<Ave> getListado() {
-		return listado;
+	
 	}
 	public int cantidadAves() {
 	return listado.size();
@@ -35,5 +32,20 @@ public class Ave extends Animal {
 		Ave Aguila=new Ave(nombre,edad,"montanas",genero,"blanco y amarillo");
 		Ave.aguilas++;
 		return Aguila;
+	}
+	public String getColorPlumas() {
+		return colorPlumas;
+	}
+
+	public void setColorPlumas(String colorPlumas) {
+		this.colorPlumas = colorPlumas;
+	}
+	
+	public static ArrayList<Ave> getListado() {
+		return listado;
+	}
+	
+	public static void setListado(ArrayList<Ave> listado) {
+		Ave.listado = listado;
 	}
 }

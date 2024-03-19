@@ -1,5 +1,5 @@
 package zooAnimales;
-
+import java.util.ArrayList;
 import gestion.Zona;
 import zooAnimales.*;
 import gestion.Zoologico;
@@ -10,7 +10,7 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private Zona[] zona;
+	private Zona zona;
 	
 	public Animal(String nombre,int edad,String habitat,String genero) {
 		this.nombre=nombre;
@@ -19,7 +19,10 @@ public class Animal {
 		this.genero=genero;
 		totalAnimales++;
 	}
-	public Animal() {}
+	public Animal() {
+		this(null, 0, null, null);
+		Animal.totalAnimales++;
+	}
 	
 	protected void setNombre(String nombre) {
 		this.nombre=nombre;
@@ -33,14 +36,14 @@ public class Animal {
 	protected void setGenero(String genero) {
 		this.genero=genero;
 	}
-	protected void setZona(Zona[] zona) {
+	protected void setZona(Zona zona) {
 		this.zona=zona;
 	}
 	public String movimiento() {
 		return "desplazarse";
 		
 	}
-	public String totalPorTipo(){
+	public static String totalPorTipo(){
 		int Anf=0;
 		for (int i=0;i<Anfibio.getListado().size();i++) {
 			Anf++;
@@ -68,7 +71,7 @@ public class Animal {
 			return ("Mi nombre es "+nombre+", tengo una edad de "+Integer.toString(edad)+", habito en "+habitat+" y mi genero es "+genero);
 		}
 		else {
-			return("Mi nombre es "+nombre+", tengo una edad de "+Integer.toString(edad)+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+zona[0].getNombre()+", en el "+zona[0].getZoo()[0].getNombre());
+			return("Mi nombre es "+nombre+", tengo una edad de "+Integer.toString(edad)+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+zona.getNombre()+", en el "+zona.getZoo().getNombre());
 
 		}
 		
